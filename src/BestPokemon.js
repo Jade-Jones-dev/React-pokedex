@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const BestPokemon = () => {
     const abilities = ["Anticipation", "Adaptability", "Run-Away"];

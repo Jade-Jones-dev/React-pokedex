@@ -5,11 +5,14 @@ import CaughtPokemon from "./CaughtPokemon";
 import BestPokemon from "./BestPokemon";
 
 function App() {
+  function logWhenClicked() {
+    return alert("The Pokedex");
+  }
 return (
   <div>
-    <Logo/>
-    <BestPokemon/>
-    <CaughtPokemon/>
+    <Logo appName = 'Jades' handleClick={logWhenClicked}/>
+    <BestPokemon />
+    <CaughtPokemon date = {new Date().toLocaleDateString()}/>
   </div>
 );
 }
