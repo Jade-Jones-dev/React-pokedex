@@ -30,4 +30,6 @@ useEffect(() => {
   }
 }
 
+// do ternary operator for if else statement
+
 export default PokemonMoves;
