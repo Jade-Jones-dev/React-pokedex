@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 
 
 
-function PokemonMoves() {
+const PokemonMoves = (props) => {
 let [pokemonData, setpokemonData] = useState(null);
 useEffect(() => {
     fetch(
-        "https://pokeapi.co/api/v2/pokemon/1/"
+        `https://pokeapi.co/api/v2/pokemon/${props.pokemonId}/`
         )
     .then((res) => res.json())
     .then((data)=> {
         setpokemonData(data);
     });
 }
-,[]);
+,[props.pokemonId]);
   if (pokemonData) {
     return (
       <div>
@@ -28,8 +28,8 @@ useEffect(() => {
   } else {
     return null;
   }
-}
+};
 
-// do ternary operator for if else statement
+// do ternary operator for if else statemen
 
 export default PokemonMoves;
